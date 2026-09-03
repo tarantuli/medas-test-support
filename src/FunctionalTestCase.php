@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Medas\TestSupport;
 
+use Medas\Core\Events\DebugInformationGatherer;
 use Medas\EntityManager\Repository;
 use Medas\HttpClient\Interfaces\RequestController;
 use Medas\HttpRequestFaker\{CapturedResponse, RequestFaker};
-use Medas\HttpRequestHandler\Request\Method;
+use Medas\HttpRequestHandler\Request\{Method, Request};
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -22,6 +23,9 @@ abstract class FunctionalTestCase extends TestCase
 {
     private RequestFaker $requestFaker;
     private Repository $repository;
+
+    /** @var string[] Debug events accumulated across the test's requests, dumped on failure. */
+    private array $debugTrace = [];
 
     protected function requestFaker(): RequestFaker
     {
@@ -52,6 +56,23 @@ abstract class FunctionalTestCase extends TestCase
 
         // Each test starts with a clean cookie jar, so nothing leaks between flows.
         $this->requestFaker()->clearJar();
+    }
+
+    /**
+     * On failure, dump the debug trace accumulated across the test's requests - the
+     * event chain that is otherwise invisible in an event-driven flow (which flush
+     * committed what, which listener fired). Green tests print nothing.
+     */
+    protected function onNotSuccessfulTest(\Throwable $t): never
+    {
+        if ($this->debugTrace !== []) {
+            fwrite(
+                STDERR,
+                "\n=== request debug trace ===\n" . implode("\n", $this->debugTrace) . "\n"
+            );
+        }
+
+        throw $t;
     }
 
     /**
@@ -89,7 +110,7 @@ abstract class FunctionalTestCase extends TestCase
 
         $request->authentication->user = $user;
 
-        return $this->requestFaker()->captureDispatch($request);
+        return $this->captureAndTrace($request, "$method->value $uri");
     }
 
     /** @return array<string, string> */
@@ -98,6 +119,23 @@ abstract class FunctionalTestCase extends TestCase
         $header = $this->authorizationHeader();
 
         return $header === null ? [] : ['Authorization' => $header];
+    }
+
+    /**
+     * Dispatches the request, then snapshots that request's debug events into the
+     * per-test trace under a boundary header. The faker clears the gatherer per
+     * request, so this captures exactly one request's events.
+     */
+    private function captureAndTrace(Request $request, string $label): CapturedResponse
+    {
+        $response = $this->requestFaker()->captureDispatch($request);
+        $this->debugTrace[] = "--- $label ---";
+
+        foreach (service(DebugInformationGatherer::class)->events as $event) {
+            $this->debugTrace[] = $event;
+        }
+
+        return $response;
     }
 
     /**
@@ -126,7 +164,7 @@ abstract class FunctionalTestCase extends TestCase
 
         $request->authentication->user = $user;
 
-        return $this->requestFaker()->captureDispatch($request);
+        return $this->captureAndTrace($request, "$method->value $uri");
     }
 
     /**
@@ -148,7 +186,6 @@ abstract class FunctionalTestCase extends TestCase
             bodyData: $bodyData,
         );
 
-        return $this->requestFaker()->captureDispatch($request);
+        return $this->captureAndTrace($request, "$method->value $uri (anonymous)");
     }
 }
-
