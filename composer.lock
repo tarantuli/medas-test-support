@@ -4,8 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46e82451ad44a69fe932c42b3a44e3a0",
+    "content-hash": "15744ce1339c1e162012b6e9488e1a5a",
     "packages": [
+        {
+            "name": "morphp/medas-console",
+            "version": "v4.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantuli/medas-console.git",
+                "reference": "871cbeb949b997ef8089b8bbbc67a511a287dfea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantuli/medas-console/zipball/871cbeb949b997ef8089b8bbbc67a511a287dfea",
+                "reference": "871cbeb949b997ef8089b8bbbc67a511a287dfea",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "morphp/medas-core": "^3|^4",
+                "php": "^8.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Medas\\Console\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Medas\\ConsoleTest\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Patrick Morpey",
+                    "email": "patrick@morphp.nl"
+                }
+            ],
+            "description": "Medas console",
+            "keywords": [
+                "console"
+            ],
+            "support": {
+                "source": "https://github.com/tarantuli/medas-console/tree/v4.1.1",
+                "issues": "https://github.com/tarantuli/medas-console/issues"
+            },
+            "time": "2026-08-30T09:56:54+00:00"
+        },
         {
             "name": "morphp/medas-core",
             "version": "v4.3.7",
@@ -56,57 +105,643 @@
             "time": "2026-09-01T10:38:38+00:00"
         },
         {
-            "name": "psr/event-dispatcher",
-            "version": "1.0.0",
+            "name": "morphp/medas-entity-manager",
+            "version": "v3.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-fig/event-dispatcher.git",
-                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0"
+                "url": "https://github.com/tarantuli/medas-entity-manager.git",
+                "reference": "890487ab8c96fcc948bd9f05dd4f77da757f2176"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/dbefd12671e8a14ec7f180cab83036ed26714bb0",
-                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "url": "https://api.github.com/repos/tarantuli/medas-entity-manager/zipball/890487ab8c96fcc948bd9f05dd4f77da757f2176",
+                "reference": "890487ab8c96fcc948bd9f05dd4f77da757f2176",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.0"
+                "ext-pdo": "*",
+                "morphp/medas-core": "^4.3",
+                "morphp/medas-object-to-array-serializer": "^3",
+                "php": "^8.4"
+            },
+            "require-dev": {
+                "morphp/medas-config-manager": "^3",
+                "morphp/medas-config-options": "^3",
+                "morphp/medas-events": "^3",
+                "morphp/medas-object-instantiator": "^4",
+                "morphp/medas-service-manager": "^4",
+                "phpunit/phpunit": "^10"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "Psr\\EventDispatcher\\": "src/"
+                    "Medas\\EntityManager\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
+            "autoload-dev": {
+                "psr-4": {
+                    "Medas\\EntityManagerTest\\": "tests/"
+                }
+            },
             "authors": [
                 {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "name": "Patrick Morpey",
+                    "email": "patrick@morphp.nl"
                 }
             ],
-            "description": "Standard interfaces for event handling.",
+            "description": "Medas entity manager",
             "keywords": [
-                "events",
-                "psr",
-                "psr-14"
+                "entities"
             ],
             "support": {
-                "issues": "https://github.com/php-fig/event-dispatcher/issues",
-                "source": "https://github.com/php-fig/event-dispatcher/tree/1.0.0"
+                "source": "https://github.com/tarantuli/medas-entity-manager/tree/v3.9.1",
+                "issues": "https://github.com/tarantuli/medas-entity-manager/issues"
             },
-            "time": "2019-01-08T18:20:26+00:00"
-        }
-    ],
-    "packages-dev": [
+            "time": "2026-09-02T10:26:29+00:00"
+        },
+        {
+            "name": "morphp/medas-error-reporting",
+            "version": "v4.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantuli/medas-error-reporting.git",
+                "reference": "2efd13065584f128b817659c332f16e076112d8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantuli/medas-error-reporting/zipball/2efd13065584f128b817659c332f16e076112d8b",
+                "reference": "2efd13065584f128b817659c332f16e076112d8b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "morphp/medas-core": "^4",
+                "php": "^8.4",
+                "phpmailer/phpmailer": "^7.0"
+            },
+            "require-dev": {
+                "morphp/medas-config-manager": "^3",
+                "morphp/medas-config-options": "^3",
+                "morphp/medas-file-system": "^3",
+                "morphp/medas-object-instantiator": "^4",
+                "morphp/medas-service-manager": "^4",
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Medas\\ErrorReporting\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Medas\\ErrorReportingTest\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Patrick Morpey",
+                    "email": "patrick@morphp.nl"
+                }
+            ],
+            "description": "Medas error-reporting",
+            "keywords": [
+                "backend"
+            ],
+            "support": {
+                "source": "https://github.com/tarantuli/medas-error-reporting/tree/v4.0.7",
+                "issues": "https://github.com/tarantuli/medas-error-reporting/issues"
+            },
+            "time": "2026-08-06T13:25:51+00:00"
+        },
+        {
+            "name": "morphp/medas-file-system",
+            "version": "v3.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantuli/medas-file-system.git",
+                "reference": "2ebd7614f214fa93302a88193f72e2446ceee11e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantuli/medas-file-system/zipball/2ebd7614f214fa93302a88193f72e2446ceee11e",
+                "reference": "2ebd7614f214fa93302a88193f72e2446ceee11e",
+                "shasum": ""
+            },
+            "require": {
+                "morphp/medas-core": "^4",
+                "php": "^8.4"
+            },
+            "require-dev": {
+                "morphp/medas-object-instantiator": "^4",
+                "morphp/medas-service-manager": "^4",
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Medas\\FileSystem\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Medas\\FileSystemTest\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Patrick Morpey",
+                    "email": "patrick@morphp.nl"
+                }
+            ],
+            "description": "Medas file system",
+            "keywords": [
+                "backend",
+                "storage"
+            ],
+            "support": {
+                "source": "https://github.com/tarantuli/medas-file-system/tree/v3.0.5",
+                "issues": "https://github.com/tarantuli/medas-file-system/issues"
+            },
+            "time": "2026-06-15T09:50:47+00:00"
+        },
+        {
+            "name": "morphp/medas-files",
+            "version": "v3.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantuli/medas-files.git",
+                "reference": "957908ef2f7f4a8ec4ee2a48f831718d79fba8db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantuli/medas-files/zipball/957908ef2f7f4a8ec4ee2a48f831718d79fba8db",
+                "reference": "957908ef2f7f4a8ec4ee2a48f831718d79fba8db",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "morphp/medas-core": "^4",
+                "morphp/medas-file-system": "^3",
+                "php": "^8.4"
+            },
+            "require-dev": {
+                "morphp/medas-object-instantiator": "^4",
+                "morphp/medas-service-manager": "^4",
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Medas\\Files\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Medas\\FilesTest\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Patrick Morpey",
+                    "email": "patrick@morphp.nl"
+                }
+            ],
+            "description": "File content hashing and MIME type detection for the Medas framework",
+            "keywords": [
+                "data manipulation"
+            ],
+            "support": {
+                "source": "https://github.com/tarantuli/medas-files/tree/v3.0.5",
+                "issues": "https://github.com/tarantuli/medas-files/issues"
+            },
+            "time": "2026-06-15T10:00:58+00:00"
+        },
+        {
+            "name": "morphp/medas-http-client",
+            "version": "v3.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantuli/medas-http-client.git",
+                "reference": "4909acabf922c0f528476b417eded81a77f4b1b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantuli/medas-http-client/zipball/4909acabf922c0f528476b417eded81a77f4b1b4",
+                "reference": "4909acabf922c0f528476b417eded81a77f4b1b4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "morphp/medas-core": "^4",
+                "morphp/medas-json": "^3"
+            },
+            "require-dev": {
+                "morphp/medas-object-instantiator": "^4",
+                "morphp/medas-service-manager": "^4",
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Medas\\HttpClient\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Medas\\HttpClientTest\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Patrick Morpey",
+                    "email": "patrick@morphp.nl"
+                }
+            ],
+            "description": "Medas http client",
+            "keywords": [
+                "http"
+            ],
+            "support": {
+                "source": "https://github.com/tarantuli/medas-http-client/tree/v3.4.3",
+                "issues": "https://github.com/tarantuli/medas-http-client/issues"
+            },
+            "time": "2026-09-02T14:58:36+00:00"
+        },
+        {
+            "name": "morphp/medas-http-request-faker",
+            "version": "v1.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantuli/medas-http-request-faker.git",
+                "reference": "fd8d6ea88f3f9c87803b6cae1c7ec020a353ad46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantuli/medas-http-request-faker/zipball/fd8d6ea88f3f9c87803b6cae1c7ec020a353ad46",
+                "reference": "fd8d6ea88f3f9c87803b6cae1c7ec020a353ad46",
+                "shasum": ""
+            },
+            "require": {
+                "morphp/medas-core": "^4",
+                "morphp/medas-http-request-handler": "^3",
+                "php": "^8.4"
+            },
+            "require-dev": {
+                "morphp/medas-object-instantiator": "^4",
+                "morphp/medas-service-manager": "^4",
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Medas\\HttpRequestFaker\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Medas\\HttpRequestFakerTest\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Patrick Morpey",
+                    "email": "patrick@morphp.nl"
+                }
+            ],
+            "description": "Medas HTTP request faker",
+            "keywords": [
+                "entities",
+                "http"
+            ],
+            "support": {
+                "source": "https://github.com/tarantuli/medas-http-request-faker/tree/v1.1.8",
+                "issues": "https://github.com/tarantuli/medas-http-request-faker/issues"
+            },
+            "time": "2026-06-15T10:53:37+00:00"
+        },
+        {
+            "name": "morphp/medas-http-request-handler",
+            "version": "v3.3.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantuli/medas-http-request-handler.git",
+                "reference": "7fa61697cbd67fea90e58bdd1015bf83175e4ae6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantuli/medas-http-request-handler/zipball/7fa61697cbd67fea90e58bdd1015bf83175e4ae6",
+                "reference": "7fa61697cbd67fea90e58bdd1015bf83175e4ae6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "morphp/medas-core": "^4",
+                "morphp/medas-error-reporting": "^4",
+                "morphp/medas-files": "^3",
+                "morphp/medas-json": "^3",
+                "morphp/medas-routing": "^3",
+                "php": "^8.4",
+                "psr/http-message": "^2.0",
+                "psr/http-server-handler": "^1.0",
+                "psr/http-server-middleware": "^1.0"
+            },
+            "require-dev": {
+                "morphp/medas-events": "^3",
+                "morphp/medas-object-instantiator": "^4",
+                "morphp/medas-service-manager": "^4",
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Medas\\HttpRequestHandler\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Medas\\HttpRequestHandlerTest\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Patrick Morpey",
+                    "email": "patrick@morphp.nl"
+                }
+            ],
+            "description": "Medas HTTP request handler",
+            "keywords": [
+                "http"
+            ],
+            "support": {
+                "source": "https://github.com/tarantuli/medas-http-request-handler/tree/v3.3.12",
+                "issues": "https://github.com/tarantuli/medas-http-request-handler/issues"
+            },
+            "time": "2026-07-23T14:26:27+00:00"
+        },
+        {
+            "name": "morphp/medas-json",
+            "version": "v3.0.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantuli/medas-json.git",
+                "reference": "1df8947b5282e44f0a258f27f96e9daca5e9e977"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantuli/medas-json/zipball/1df8947b5282e44f0a258f27f96e9daca5e9e977",
+                "reference": "1df8947b5282e44f0a258f27f96e9daca5e9e977",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "morphp/medas-core": "^4",
+                "php": "^8.4"
+            },
+            "require-dev": {
+                "morphp/medas-object-instantiator": "^4",
+                "morphp/medas-service-manager": "^4",
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Medas\\Json\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Medas\\JsonTest\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Patrick Morpey",
+                    "email": "patrick@morphp.nl"
+                }
+            ],
+            "description": "Medas JSON",
+            "keywords": [
+                "data manipulation"
+            ],
+            "support": {
+                "source": "https://github.com/tarantuli/medas-json/tree/v3.0.13",
+                "issues": "https://github.com/tarantuli/medas-json/issues"
+            },
+            "time": "2026-08-26T10:42:34+00:00"
+        },
+        {
+            "name": "morphp/medas-object-to-array-serializer",
+            "version": "v3.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantuli/medas-object-to-array-serializer.git",
+                "reference": "680759b0345e40bfdd12cbeae5027199b47f3240"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantuli/medas-object-to-array-serializer/zipball/680759b0345e40bfdd12cbeae5027199b47f3240",
+                "reference": "680759b0345e40bfdd12cbeae5027199b47f3240",
+                "shasum": ""
+            },
+            "require": {
+                "morphp/medas-core": "^4",
+                "morphp/medas-php-class-analysis": "^3",
+                "php": "^8.4"
+            },
+            "require-dev": {
+                "morphp/medas-object-instantiator": "^4",
+                "morphp/medas-ramsey-uuid-bridge": "^3",
+                "morphp/medas-service-manager": "^4",
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Medas\\ObjectToArraySerializer\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Medas\\ObjectToArraySerializerTest\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Patrick Morpey",
+                    "email": "patrick@morphp.nl"
+                }
+            ],
+            "description": "Medas object to array serializer",
+            "keywords": [
+                "data manipulation"
+            ],
+            "support": {
+                "source": "https://github.com/tarantuli/medas-object-to-array-serializer/tree/v3.2.4",
+                "issues": "https://github.com/tarantuli/medas-object-to-array-serializer/issues"
+            },
+            "time": "2026-07-20T12:20:12+00:00"
+        },
+        {
+            "name": "morphp/medas-php-class-analysis",
+            "version": "v3.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantuli/medas-php-class-analysis.git",
+                "reference": "93e511386eea6adaa7e5ed6b06bafbda79902848"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantuli/medas-php-class-analysis/zipball/93e511386eea6adaa7e5ed6b06bafbda79902848",
+                "reference": "93e511386eea6adaa7e5ed6b06bafbda79902848",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "morphp/medas-core": "^4",
+                "morphp/medas-php-tokenizer": "^3",
+                "php": "^8.4"
+            },
+            "require-dev": {
+                "morphp/medas-object-instantiator": "^4",
+                "morphp/medas-service-manager": "^4",
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Medas\\PhpClassAnalysis\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Medas\\PhpClassAnalysisTest\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Patrick Morpey",
+                    "email": "patrick@morphp.nl"
+                }
+            ],
+            "description": "Medas PHP class analysis",
+            "keywords": [
+                "backend"
+            ],
+            "support": {
+                "source": "https://github.com/tarantuli/medas-php-class-analysis/tree/v3.1.4",
+                "issues": "https://github.com/tarantuli/medas-php-class-analysis/issues"
+            },
+            "time": "2026-08-05T15:00:32+00:00"
+        },
+        {
+            "name": "morphp/medas-php-tokenizer",
+            "version": "v3.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantuli/medas-php-tokenizer.git",
+                "reference": "4a6e069b68bde4112755124d0929f716d27af796"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantuli/medas-php-tokenizer/zipball/4a6e069b68bde4112755124d0929f716d27af796",
+                "reference": "4a6e069b68bde4112755124d0929f716d27af796",
+                "shasum": ""
+            },
+            "require": {
+                "morphp/medas-console": "^4",
+                "morphp/medas-core": "^4",
+                "php": "^8.4"
+            },
+            "require-dev": {
+                "morphp/medas-console-printer": "^4|^5",
+                "morphp/medas-object-instantiator": "^4",
+                "morphp/medas-service-manager": "^4",
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Medas\\PhpTokenizer\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Medas\\PhpTokenizerTest\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Patrick Morpey",
+                    "email": "patrick@morphp.nl"
+                }
+            ],
+            "description": "Medas PHP tokenizer",
+            "keywords": [
+                "backend"
+            ],
+            "support": {
+                "source": "https://github.com/tarantuli/medas-php-tokenizer/tree/v3.1.5",
+                "issues": "https://github.com/tarantuli/medas-php-tokenizer/issues"
+            },
+            "time": "2026-07-29T07:53:07+00:00"
+        },
+        {
+            "name": "morphp/medas-routing",
+            "version": "v3.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantuli/medas-routing.git",
+                "reference": "d1c742fa0dac51a330df4f8858e6004e2796ef4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantuli/medas-routing/zipball/d1c742fa0dac51a330df4f8858e6004e2796ef4d",
+                "reference": "d1c742fa0dac51a330df4f8858e6004e2796ef4d",
+                "shasum": ""
+            },
+            "require": {
+                "morphp/medas-console": "^4",
+                "morphp/medas-core": "^4",
+                "php": "^8.4"
+            },
+            "require-dev": {
+                "morphp/medas-config-manager": "^3",
+                "morphp/medas-config-options": "^3",
+                "morphp/medas-console-printer": "^5",
+                "morphp/medas-events": "^3",
+                "morphp/medas-object-instantiator": "^4",
+                "morphp/medas-service-manager": "^4",
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Medas\\Routing\\": "src/",
+                    "Medas\\RoutingTest\\": "tests/"
+                },
+                "autoload-dev": {
+                    "psr-4": {
+                        "Medas\\RoutingTest\\": "tests/"
+                    }
+                }
+            },
+            "authors": [
+                {
+                    "name": "Patrick Morpey",
+                    "email": "patrick@morphp.nl"
+                }
+            ],
+            "description": "Medas routing",
+            "keywords": [
+                "http"
+            ],
+            "support": {
+                "source": "https://github.com/tarantuli/medas-routing/tree/v3.0.9",
+                "issues": "https://github.com/tarantuli/medas-routing/issues"
+            },
+            "time": "2026-07-29T07:49:55+00:00"
+        },
         {
             "name": "myclabs/deep-copy",
             "version": "1.14.0",
@@ -341,6 +976,88 @@
                 "source": "https://github.com/phar-io/version/tree/3.2.1"
             },
             "time": "2022-02-21T01:04:05+00:00"
+        },
+        {
+            "name": "phpmailer/phpmailer",
+            "version": "v7.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPMailer/PHPMailer.git",
+                "reference": "1bc1716a507a65e039d4ac9d9adebbbd0d346e15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/1bc1716a507a65e039d4ac9d9adebbbd0d346e15",
+                "reference": "1bc1716a507a65e039d4ac9d9adebbbd0d346e15",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-filter": "*",
+                "ext-hash": "*",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "doctrine/annotations": "^1.2.6 || ^1.13.3",
+                "php-parallel-lint/php-console-highlighter": "^1.0.0",
+                "php-parallel-lint/php-parallel-lint": "^1.3.2",
+                "phpcompatibility/php-compatibility": "^10.0.0@dev",
+                "squizlabs/php_codesniffer": "^3.13.5",
+                "yoast/phpunit-polyfills": "^1.0.4"
+            },
+            "suggest": {
+                "decomplexity/SendOauth2": "Adapter for using XOAUTH2 authentication",
+                "directorytree/imapengine": "For uploading sent messages via IMAP, see gmail example",
+                "ext-imap": "Needed to support advanced email address parsing according to RFC822",
+                "ext-mbstring": "Needed to send email in multibyte encoding charset or decode encoded addresses",
+                "ext-openssl": "Needed for secure SMTP sending and DKIM signing",
+                "greew/oauth2-azure-provider": "Needed for Microsoft Azure XOAUTH2 authentication",
+                "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
+                "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
+                "psr/log": "For optional PSR-3 debug logging",
+                "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)",
+                "thenetworg/oauth2-azure": "Needed for Microsoft XOAUTH2 authentication"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHPMailer\\PHPMailer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1-only"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Bointon",
+                    "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
+                },
+                {
+                    "name": "Andy Prevost",
+                    "email": "codeworxtech@users.sourceforge.net"
+                },
+                {
+                    "name": "Brent R. Matzelle"
+                }
+            ],
+            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "support": {
+                "issues": "https://github.com/PHPMailer/PHPMailer/issues",
+                "source": "https://github.com/PHPMailer/PHPMailer/tree/v7.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Synchro",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-05-18T08:06:14+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -755,6 +1472,222 @@
                 }
             ],
             "time": "2026-07-06T14:50:35+00:00"
+        },
+        {
+            "name": "psr/event-dispatcher",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/event-dispatcher.git",
+                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\EventDispatcher\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Standard interfaces for event handling.",
+            "keywords": [
+                "events",
+                "psr",
+                "psr-14"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/event-dispatcher/issues",
+                "source": "https://github.com/php-fig/event-dispatcher/tree/1.0.0"
+            },
+            "time": "2019-01-08T18:20:26+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/2.0"
+            },
+            "time": "2023-04-04T09:54:51+00:00"
+        },
+        {
+            "name": "psr/http-server-handler",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-server-handler.git",
+                "reference": "84c4fb66179be4caaf8e97bd239203245302e7d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-server-handler/zipball/84c4fb66179be4caaf8e97bd239203245302e7d4",
+                "reference": "84c4fb66179be4caaf8e97bd239203245302e7d4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "psr/http-message": "^1.0 || ^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Server\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP server-side request handler",
+            "keywords": [
+                "handler",
+                "http",
+                "http-interop",
+                "psr",
+                "psr-15",
+                "psr-7",
+                "request",
+                "response",
+                "server"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-server-handler/tree/1.0.2"
+            },
+            "time": "2023-04-10T20:06:20+00:00"
+        },
+        {
+            "name": "psr/http-server-middleware",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-server-middleware.git",
+                "reference": "c1481f747daaa6a0782775cd6a8c26a1bf4a3829"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-server-middleware/zipball/c1481f747daaa6a0782775cd6a8c26a1bf4a3829",
+                "reference": "c1481f747daaa6a0782775cd6a8c26a1bf4a3829",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "psr/http-message": "^1.0 || ^2.0",
+                "psr/http-server-handler": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Server\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP server-side middleware",
+            "keywords": [
+                "http",
+                "http-interop",
+                "middleware",
+                "psr",
+                "psr-15",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/http-server-middleware/issues",
+                "source": "https://github.com/php-fig/http-server-middleware/tree/1.0.2"
+            },
+            "time": "2023-04-11T06:14:47+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -1760,6 +2693,7 @@
             "time": "2025-11-17T20:03:58+00:00"
         }
     ],
+    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {},

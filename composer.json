@@ -13,6 +13,10 @@
   "type": "library",
   "require": {
     "morphp/medas-core": "^4",
+    "morphp/medas-entity-manager": "^3",
+    "morphp/medas-http-client": "^3.4",
+    "morphp/medas-http-request-faker": "^1",
+    "morphp/medas-http-request-handler": "^3",
     "php": "^8.4",
     "phpunit/phpunit": "^10"
   },
