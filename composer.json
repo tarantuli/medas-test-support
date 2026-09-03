@@ -1,8 +1,8 @@
 {
-  "name": "morphp/medas-placeholder",
-  "description": "Medas placeholder",
+  "name": "morphp/medas-test-support",
+  "description": "Medas test support",
   "keywords": [
-    "placeholder"
+    "testing"
   ],
   "authors": [
     {
@@ -13,21 +13,19 @@
   "type": "library",
   "require": {
     "morphp/medas-core": "^4",
-    "php": "^8.4"
+    "php": "^8.4",
+    "phpunit/phpunit": "^10"
   },
   "require-dev": {
-    "morphp/medas-object-instantiator": "^4",
-    "morphp/medas-service-manager": "^4",
-    "phpunit/phpunit": "^10"
   },
   "autoload": {
     "psr-4": {
-      "Medas\\Placeholder\\": "src/"
+      "Medas\\TestSupport\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Medas\\PlaceholderTest\\": "tests/"
+      "Medas\\TestSupportTest\\": "tests/"
     }
   }
 }
