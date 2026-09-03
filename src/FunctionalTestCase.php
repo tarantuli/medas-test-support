@@ -151,3 +151,4 @@ abstract class FunctionalTestCase extends TestCase
         return $this->requestFaker()->captureDispatch($request);
     }
 }
+
