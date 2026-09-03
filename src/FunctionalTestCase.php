@@ -129,13 +129,24 @@ abstract class FunctionalTestCase extends TestCase
     private function captureAndTrace(Request $request, string $label): CapturedResponse
     {
         $response = $this->requestFaker()->captureDispatch($request);
+
+        $this->captureDebugEvents($label);
+
+        return $response;
+    }
+
+    /**
+     * Folds the gatherer's current events into the per-test trace under a boundary
+     * header. Exposed so out-of-request work - notably draining queued tasks - can
+     * add its events to the same trace that is dumped on failure.
+     */
+    protected function captureDebugEvents(string $label): void
+    {
         $this->debugTrace[] = "--- $label ---";
 
         foreach (service(DebugInformationGatherer::class)->events as $event) {
             $this->debugTrace[] = $event;
         }
-
-        return $response;
     }
 
     /**

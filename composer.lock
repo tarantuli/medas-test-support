@@ -106,16 +106,16 @@
         },
         {
             "name": "morphp/medas-entity-manager",
-            "version": "v3.9.1",
+            "version": "v3.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tarantuli/medas-entity-manager.git",
-                "reference": "890487ab8c96fcc948bd9f05dd4f77da757f2176"
+                "reference": "108102541aba3eb2d4e0f4717379f56f67ab64a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-entity-manager/zipball/890487ab8c96fcc948bd9f05dd4f77da757f2176",
-                "reference": "890487ab8c96fcc948bd9f05dd4f77da757f2176",
+                "url": "https://api.github.com/repos/tarantuli/medas-entity-manager/zipball/108102541aba3eb2d4e0f4717379f56f67ab64a6",
+                "reference": "108102541aba3eb2d4e0f4717379f56f67ab64a6",
                 "shasum": ""
             },
             "require": {
@@ -154,10 +154,10 @@
                 "entities"
             ],
             "support": {
-                "source": "https://github.com/tarantuli/medas-entity-manager/tree/v3.9.1",
+                "source": "https://github.com/tarantuli/medas-entity-manager/tree/v3.9.2",
                 "issues": "https://github.com/tarantuli/medas-entity-manager/issues"
             },
-            "time": "2026-09-02T10:26:29+00:00"
+            "time": "2026-09-03T10:34:28+00:00"
         },
         {
             "name": "morphp/medas-error-reporting",
@@ -370,16 +370,16 @@
         },
         {
             "name": "morphp/medas-http-request-faker",
-            "version": "v1.1.8",
+            "version": "v1.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tarantuli/medas-http-request-faker.git",
-                "reference": "fd8d6ea88f3f9c87803b6cae1c7ec020a353ad46"
+                "reference": "45f553cb097004be0d5e112ccc06ec371f0f0f53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-http-request-faker/zipball/fd8d6ea88f3f9c87803b6cae1c7ec020a353ad46",
-                "reference": "fd8d6ea88f3f9c87803b6cae1c7ec020a353ad46",
+                "url": "https://api.github.com/repos/tarantuli/medas-http-request-faker/zipball/45f553cb097004be0d5e112ccc06ec371f0f0f53",
+                "reference": "45f553cb097004be0d5e112ccc06ec371f0f0f53",
                 "shasum": ""
             },
             "require": {
@@ -415,10 +415,10 @@
                 "http"
             ],
             "support": {
-                "source": "https://github.com/tarantuli/medas-http-request-faker/tree/v1.1.8",
+                "source": "https://github.com/tarantuli/medas-http-request-faker/tree/v1.1.9",
                 "issues": "https://github.com/tarantuli/medas-http-request-faker/issues"
             },
-            "time": "2026-06-15T10:53:37+00:00"
+            "time": "2026-09-03T10:13:03+00:00"
         },
         {
             "name": "morphp/medas-http-request-handler",
