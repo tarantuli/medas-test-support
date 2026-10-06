@@ -22,14 +22,18 @@ class RecordingRequestController implements RequestController
 
     public int $responseCode = 200;
 
+    // What the canned response carries, for code that reads what it fetched (a
+    // file's content, say). Empty by default: a response without a body.
+    public string $responseBody = '';
+
     public function execute(Request $request): Response
     {
         $this->requests[] = $request;
 
         return new Response(
             code: $this->responseCode,
-            rawBody: '',
-            body: null,
+            rawBody: $this->responseBody,
+            body: $this->responseBody === '' ? null : $this->responseBody,
             header: '',
             curlInfo: [],
         );
@@ -39,5 +43,6 @@ class RecordingRequestController implements RequestController
     {
         $this->requests = [];
         $this->responseCode = 200;
+        $this->responseBody = '';
     }
 }
