@@ -61,11 +61,12 @@ abstract class FunctionalTestCase extends TestCase
     /**
      * On failure, dump the debug trace accumulated across the test's requests - the
      * event chain that is otherwise invisible in an event-driven flow (which flush
-     * committed what, which listener fired). Green tests print nothing.
+     * committed what, which listener fired). Green tests print nothing, and neither
+     * does a failure unless the test-support.print-request-trace option is on.
      */
     protected function onNotSuccessfulTest(\Throwable $t): never
     {
-        if ($this->debugTrace !== []) {
+        if ($this->debugTrace !== [] && service(RequestTraceSetting::class)->printsOnFailure) {
             fwrite(
                 STDERR,
                 "\n=== request debug trace ===\n" . implode("\n", $this->debugTrace) . "\n"
